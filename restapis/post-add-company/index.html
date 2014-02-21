@@ -1,0 +1,452 @@
+<h2 id="addcompany_method">addCompany Method</h2>
+
+<h3 id="overview">Overview</h3>
+
+<blockquote>
+<p>This method will be used for saving a company.</p>
+</blockquote>
+
+<h3 id="business_rule">Business Rule</h3>
+
+<ul>
+<li>Fields (import details, company details, contacts) under request must be mandatory.</li>
+
+<li>On the response, status after saving will be displayed.</li>
+</ul>
+
+<h3 id="usage">Usage</h3>
+
+<ul>
+<li>This will be used on saving details and creating login credentials for agency.</li>
+</ul>
+
+<h3 id="request">Request</h3>
+
+<h4 id="import_details">Import Details</h4>
+<table>
+	<tr>
+		<th>Field Name</th>
+		<th>Data Type</th>
+		<th>Description</th>
+		<th>Mandatory</th>
+	</tr>
+	<tr>
+		<td>AgencyID</td>
+		<td>string</td>
+		<td>Agency ID</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>WebBusinessID</td>
+		<td>integer</td>
+		<td>Landlord Web Business ID</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>AccountID</td>
+		<td>integer</td>
+		<td>Landlord Account ID</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>Action</td>
+		<td>string</td>
+		<td>Web Service Action</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>PropertyID</td>
+		<td>integer</td>
+		<td>Property ID</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>ActionType</td>
+		<td>string</td>
+		<td>Web Service Action Type</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>WebID</td>
+		<td>integer</td>
+		<td>Transaction ID</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>RemoveWebID</td>
+		<td>integer</td>
+		<td>Transaction ID to be removed</td>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<td>ManagementBusinessID</td>
+		<td>integer</td>
+		<td>Management Business ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>ReceiptNumber</td>
+		<td>string</td>
+		<td>Receipt Number</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>ReceiptAmount</td>
+		<td>double</td>
+		<td>Receipt Amount</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>MeetingID</td>
+		<td>integer</td>
+		<td>Meeting ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>CommonID</td>
+		<td>integer</td>
+		<td>Common ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>DebtorRunID</td>
+		<td>integer</td>
+		<td>Debtor Run ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>DebtorAmountDue</td>
+		<td>double</td>
+		<td>Debtor Amount Due</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>ImageOrderNumber</td>
+		<td>integer</td>
+		<td>Image Order Number</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>TaskID</td>
+		<td>integer</td>
+		<td>Task ID</td>
+		<td>no</td>
+	</tr>
+</table>
+<h4 id="company_details">Company Details</h4>
+<table>
+	<tr>
+		<th>Field Name</th>
+		<th>Data Type</th>
+		<th>Description</th>
+		<th>Mandatory</th>
+	</tr>
+	<tr>
+		<td>ID</td>
+		<td>string</td>
+		<td>Agency ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td>string</td>
+		<td>Company Name</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>ContactID</td>
+		<td>integer</td>
+		<td>Contact ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Contact</td>
+		<td>string</td>
+		<td>Contact Name</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Address1</td>
+		<td>string</td>
+		<td>Address 1</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Address2</td>
+		<td>string</td>
+		<td>Address 2</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>BusinessNumber</td>
+		<td>string</td>
+		<td>Business Number</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>eMail</td>
+		<td>string</td>
+		<td>Email Address</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>StreetNo</td>
+		<td>string</td>
+		<td>Street Number</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Street</td>
+		<td>string</td>
+		<td>Street Name</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Suburb</td>
+		<td>string</td>
+		<td>Suburb Name</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>State</td>
+		<td>string</td>
+		<td>State Code</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Postcode</td>
+		<td>string</td>
+		<td>Postcode</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td>string</td>
+		<td>Country</td>
+		<td>no</td>
+	</tr>
+</table>
+<h4 id="contacts">Contacts</h4>
+<table>
+	<tr>
+		<th>Field Name</th>
+		<th>Data Type</th>
+		<th>Description</th>
+		<th>Mandatory</th>
+	</tr>
+	<tr>
+		<td>Relation</td>
+		<td>string</td>
+		<td>Role Type</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>ContactID</td>
+		<td>integer</td>
+		<td>Contact ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>IsCompany</td>
+		<td>string</td>
+		<td>Is Company Flag</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>FirstName</td>
+		<td>string</td>
+		<td>First Name</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>LastName</td>
+		<td>string</td>
+		<td>Last Name</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>FullName</td>
+		<td>string</td>
+		<td>Full Name</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>eMail</td>
+		<td>string</td>
+		<td>Email Address</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>BusinessID</td>
+		<td>integer</td>
+		<td>Business ID</td>
+		<td>no</td>
+	</tr>
+	<tr>
+		<td>AccountID</td>
+		<td>integer</td>
+		<td>Account ID</td>
+		<td>no</td>
+	</tr>
+</table>
+<h3 id="response">Response</h3>
+<table>
+	<tr>
+		<th>Field Name</th>
+		<th>Data Type</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>status</td>
+		<td>string</td>
+		<td>Status after ingestion</td>
+	</tr>
+</table>
+<h3 id="sample_request">Sample Request</h3>
+
+<h4 id="strata">Strata</h4>
+
+<pre><code>{
+  &quot;Transaction&quot;:{
+    &quot;Import&quot;:{
+      &quot;Details&quot;:{
+        &quot;AgencyID&quot;:&quot;V900&quot;,
+        &quot;WebBusinessID&quot;:&quot;0&quot;,
+        &quot;AccountID&quot;:&quot;0&quot;,
+        &quot;Action&quot;:&quot;New Company&quot;,
+        &quot;PropertyID&quot;:&quot;0&quot;,
+        &quot;ActionType&quot;:&quot;Add&quot;,
+        &quot;WebID&quot;:&quot;902&quot;,
+        &quot;RemoveWebID&quot;:&quot;0&quot;,
+        &quot;ManagementBusinessID&quot;:&quot;0&quot;,
+        &quot;ReceiptNumber&quot;:&quot;0&quot;,
+        &quot;ReceiptAmount&quot;:&quot;0&quot;,
+        &quot;MeetingID&quot;:&quot;0&quot;,
+        &quot;CommonID&quot;:&quot;0&quot;,
+        &quot;DebtorRunID&quot;:&quot;0&quot;,
+        &quot;DebtorAmountDue&quot;:&quot;0.00&quot;,
+        &quot;ImageOrderNumber&quot;:&quot;00&quot;,
+        &quot;TaskID&quot;:&quot;0&quot;
+      }
+    },
+    &quot;CompanyDetails&quot;:{
+      &quot;Company&quot;:{
+        &quot;ID&quot;:&quot;V900&quot;,
+        &quot;Name&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+        &quot;ContactID&quot;:&quot;1&quot;,
+        &quot;Contact&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+        &quot;Address1&quot;:&quot;2 Sample Street&quot;,
+        &quot;Address2&quot;:&quot;Sydney NSW 2000&quot;,
+        &quot;BusinessNumber&quot;:&quot;1234567890&quot;,
+        &quot;eMail&quot;:&quot;john.doe@twistresources.com&quot;,
+        &quot;StreetNo&quot;:&quot;2&quot;,
+        &quot;Street&quot;:&quot;Sample Street&quot;,
+        &quot;Suburb&quot;:&quot;Sydney&quot;,
+        &quot;State&quot;:&quot;NSW&quot;,
+        &quot;Postcode&quot;:&quot;2000&quot;,
+        &quot;Country&quot;:&quot;Australia&quot;
+      }
+    },
+    &quot;Managements&quot;:{
+      &quot;Contacts&quot;:[
+        {
+          &quot;Contact&quot;:{
+            &quot;Relation&quot;:&quot;Account Owner&quot;,
+            &quot;ContactID&quot;:&quot;1&quot;,
+            &quot;IsCompany&quot;:&quot;Y&quot;,
+            &quot;FirstName&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+            &quot;LastName&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+            &quot;FullName&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+            &quot;eMail&quot;:&quot;john.doe@twistresources.com&quot;,
+            &quot;BusinessID&quot;:&quot;0&quot;,
+            &quot;AccountID&quot;:&quot;0&quot;
+          }
+        }
+      ]
+    }
+  }
+}</code></pre>
+
+<h4 id="landlord">Landlord</h4>
+
+<pre><code>{
+  &quot;Transaction&quot;:{
+    &quot;Import&quot;:{
+      &quot;Details&quot;:{
+        &quot;AgencyID&quot;:&quot;V900&quot;,
+        &quot;WebBusinessID&quot;:&quot;0&quot;,
+        &quot;AccountID&quot;:&quot;0&quot;,
+        &quot;Action&quot;:&quot;New Company&quot;,
+        &quot;PropertyID&quot;:&quot;0&quot;,
+        &quot;ActionType&quot;:&quot;Add&quot;,
+        &quot;WebID&quot;:&quot;902&quot;,
+        &quot;RemoveWebID&quot;:&quot;0&quot;,
+        &quot;ManagementBusinessID&quot;:&quot;0&quot;,
+        &quot;ReceiptNumber&quot;:&quot;0&quot;,
+        &quot;ReceiptAmount&quot;:&quot;0&quot;,
+        &quot;MeetingID&quot;:&quot;0&quot;,
+        &quot;CommonID&quot;:&quot;0&quot;,
+        &quot;DebtorRunID&quot;:&quot;0&quot;,
+        &quot;DebtorAmountDue&quot;:&quot;0.00&quot;,
+        &quot;ImageOrderNumber&quot;:&quot;00&quot;,
+        &quot;TaskID&quot;:&quot;0&quot;
+      }
+    },
+    &quot;CompanyDetails&quot;:{
+      &quot;Company&quot;:{
+        &quot;ID&quot;:&quot;V900&quot;,
+        &quot;Name&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+        &quot;ContactID&quot;:&quot;1&quot;,
+        &quot;Contact&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+        &quot;Address1&quot;:&quot;2 Sample Street&quot;,
+        &quot;Address2&quot;:&quot;Sydney NSW 2000&quot;,
+        &quot;BusinessNumber&quot;:&quot;1234567890&quot;,
+        &quot;eMail&quot;:&quot;john.doe@twistresources.com&quot;,
+        &quot;StreetNo&quot;:&quot;2&quot;,
+        &quot;Street&quot;:&quot;Sample Street&quot;,
+        &quot;Suburb&quot;:&quot;Sydney&quot;,
+        &quot;State&quot;:&quot;NSW&quot;,
+        &quot;Postcode&quot;:&quot;2000&quot;,
+        &quot;Country&quot;:&quot;Australia&quot;
+      }
+    },
+    &quot;Properties&quot;:{
+      &quot;Contacts&quot;:[
+        {
+          &quot;Contact&quot;:{
+            &quot;Relation&quot;:&quot;Account Owner&quot;,
+            &quot;ContactID&quot;:&quot;1&quot;,
+            &quot;IsCompany&quot;:&quot;Y&quot;,
+            &quot;FirstName&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+            &quot;LastName&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+            &quot;FullName&quot;:&quot;Lorem ipsum dolor sit amet, consectetur&quot;,
+            &quot;eMail&quot;:&quot;john.doe@twistresources.com&quot;,
+            &quot;BusinessID&quot;:&quot;0&quot;,
+            &quot;AccountID&quot;:&quot;0&quot;
+          }
+        }
+      ]
+    }
+  }
+}</code></pre>
+
+<h3 id="sample_response">Sample Response</h3>
+
+<h4 id="success">Success:</h4>
+
+<pre><code>{
+  &quot;status&quot;: &quot;success&quot;
+}</code></pre>
+
+<h4 id="error">Error:</h4>
+
+<pre><code>{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;message&quot;: &quot;&quot;
+}</code></pre>
+
+<h4 id="note">Note:</h4>
+
+<blockquote>
+<p>On Error message: use standard HTTP error codes but with some additional information.</p>
+</blockquote>
